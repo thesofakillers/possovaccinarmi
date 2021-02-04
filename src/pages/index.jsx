@@ -1,6 +1,6 @@
 import * as React from "react";
-import VegaSpec from "../../content/decisioni.vg.json";
-import VegaData from "../../content/flare.json";
+import VegaSpec from "../../content/decisioni.vg.js";
+import VegaData from "../../content/data.json";
 import { Vega } from "react-vega";
 
 export default () => (
