@@ -9,7 +9,7 @@ const nodes = [
     state: "highlighted", // Support for flowstate (allows you to modify the styling of a node based on this value)
     connection: {
       id: "ospite_rsa",
-      position: "right",
+      position: "bottom",
     },
   },
   {
