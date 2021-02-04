@@ -9,7 +9,7 @@ const nodes = [
     state: "highlighted", // Support for flowstate (allows you to modify the styling of a node based on this value)
     connection: {
       id: "ospite_rsa",
-      position: "bottom",
+      position: "right",
     },
   },
   {
@@ -19,11 +19,11 @@ const nodes = [
     connections: {
       yes: {
         id: "puoi_vaccinarti",
-        position: "right",
+        position: "bottom",
       },
       no: {
         id: "personale_rsa",
-        position: "bottom",
+        position: "right",
       },
     },
   },
@@ -34,11 +34,11 @@ const nodes = [
     connections: {
       yes: {
         id: "puoi_vaccinarti",
-        position: "right",
+        position: "bottom",
       },
       no: {
         id: "sanitari_sociosanitari",
-        position: "bottom",
+        position: "right",
       },
     },
   },
@@ -49,11 +49,11 @@ const nodes = [
     connections: {
       yes: {
         id: "puoi_vaccinarti",
-        position: "right",
+        position: "bottom",
       },
       no: {
         id: "non_puoi_vaccinarti",
-        position: "left",
+        position: "right",
       },
     },
   },
