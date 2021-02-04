@@ -5,54 +5,76 @@ const nodes = [
   {
     type: "start",
     id: "my_start_node",
-    label: "Start flow",
+    label: "Posso vaccinarmi contro il COVID19?",
     state: "highlighted", // Support for flowstate (allows you to modify the styling of a node based on this value)
     connection: {
-      id: "my_condition_node",
+      id: "ospite_rsa",
       position: "bottom",
     },
   },
   {
     type: "condition",
-    id: "my_condition_node",
-    label: "True or false?",
+    id: "ospite_rsa",
+    label: "Sei un ospite di un' RSA?",
     connections: {
       yes: {
-        id: "dummy_node",
+        id: "puoi_vaccinarti",
         position: "right",
       },
       no: {
-        id: "my_operation_node",
+        id: "personale_rsa",
         position: "bottom",
       },
     },
   },
   {
-    type: "operation",
-    id: "my_operation_node",
-    label: "Foo operation",
+    type: "condition",
+    id: "personale_rsa",
+    label: "Fai parte del personale di un' rsa?",
+    connections: {
+      yes: {
+        id: "puoi_vaccinarti",
+        position: "right",
+      },
+      no: {
+        id: "sanitari_sociosanitari",
+        position: "bottom",
+      },
+    },
   },
   {
-    type: "inputoutput",
-    id: "dummy_node",
-    label: "Dummy",
-    connection: {
-      id: "end",
-      position: "bottom",
+    type: "condition",
+    id: "sanitari_sociosanitari",
+    label: "Sei un operatore sanitario o sociosanitario?",
+    connections: {
+      yes: {
+        id: "puoi_vaccinarti",
+        position: "right",
+      },
+      no: {
+        id: "non_puoi_vaccinarti",
+        position: "left",
+      },
     },
   },
   {
     type: "end",
-    id: "end",
-    label: "End flow",
+    id: "puoi_vaccinarti",
+    label: "Puoi vaccinarti!",
+  },
+  {
+    type: "end",
+    id: "non_puoi_vaccinarti",
+    label: "Non puoi vaccinarti, per ora.",
   },
 ];
 
 // Config (optional) - here we configure the flowchart, eg. line width, font family, arrow type, yes and no texts, etc.
 const config = {
   lineWidth: 3,
-  yesText: "Yes!",
+  yesText: "Sì!",
   noText: "No",
+  arrowEnd: "block",
 };
 
 // Styles (optional) - here we define the base styling for our nodes based on the node type (the "type" property)
@@ -86,7 +108,6 @@ const onClick = (item, mouseEvent) => {
 
 export default () => (
   <div style={{ maxWidth: `960px`, margin: `1.45rem` }}>
-    <h1>Hello World!</h1>
     <Flowchart
       nodes={nodes}
       config={config}
