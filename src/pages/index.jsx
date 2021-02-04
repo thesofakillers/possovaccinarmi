@@ -75,6 +75,7 @@ const config = {
   yesText: "Sì!",
   noText: "No",
   arrowEnd: "block",
+  scale: 0.8,
 };
 
 // Styles (optional) - here we define the base styling for our nodes based on the node type (the "type" property)
