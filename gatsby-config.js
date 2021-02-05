@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Posso Vaccinarmi?",
+    siteUrl: "https://possovaccinarmi.it",
   },
   plugins: [
     "gatsby-plugin-sharp",
