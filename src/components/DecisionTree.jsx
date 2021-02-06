@@ -29,7 +29,7 @@ const nodes = [
   {
     type: "condition",
     id: "personale_rsa",
-    label: "Fai parte del personale di un' rsa?",
+    label: "Fai parte del personale di un' RSA?",
     connections: {
       yes: {
         id: "puoi_vaccinarti",
