@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import DecisionTree from "../components/DecisionTree";
 
 export default () => (
   <div>
@@ -11,7 +10,6 @@ export default () => (
     </Helmet>
     <div style={{ margin: `1.45rem` }}>
       <h1>Posso Vaccinarmi?</h1>
-      <DecisionTree />
     </div>
   </div>
 );
