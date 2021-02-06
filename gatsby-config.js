@@ -9,7 +9,6 @@ module.exports = {
       options: {
         name: "Posso Vaccinarmi?",
         short_name: "possovaccinarmi",
-        start_url: "/",
         icon: "src/images/favicon.png",
       },
     },
