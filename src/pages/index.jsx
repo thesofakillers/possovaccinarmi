@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { WizardForm } from "../components/WizardForm";
 
 export default () => (
   <div>
@@ -10,6 +11,7 @@ export default () => (
     </Helmet>
     <div style={{ margin: `1.45rem` }}>
       <h1>Posso Vaccinarmi?</h1>
+      <WizardForm />
     </div>
   </div>
 );
