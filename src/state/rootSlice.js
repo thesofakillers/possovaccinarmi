@@ -26,6 +26,7 @@ const rootSlice = createSlice({
 
 export const reducer = rootSlice.reducer;
 export const {
+  setQuestion,
   chooseOspiteRSA,
   choosePersonaleRSA,
   chooseOperatoreSS,
