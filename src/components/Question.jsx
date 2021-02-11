@@ -1,46 +1,24 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import {
-  chooseOperatoreSS,
-  chooseOspiteRSA,
-  choosePersonaleRSA,
-  setQuestion,
-} from "../state/rootSlice";
-
-const questionNumberMap = {
-  0: {
-    questionText: "Sei un ospite di un' RSA?",
-    questionDispatch: chooseOspiteRSA,
-  },
-  1: {
-    questionText: "Fai parte del personale di un' RSA?",
-    questionDispatch: choosePersonaleRSA,
-  },
-  2: {
-    questionText: "Sei un operatore sanitario o sociosanitario?",
-    questionDispatch: chooseOperatoreSS,
-  },
-};
+import { answerQuestion, setQuestion } from "../state/rootSlice";
 
 export const Question = (props) => {
   const dispatch = useDispatch();
-
-  const questionInfo = questionNumberMap[props.number];
+  const questionNumber = props.number;
+  const questionText = props.text;
 
   const handleYes = (e) => {
     e.preventDefault();
-    dispatch(questionInfo.questionDispatch(true));
-    console.log("Yes");
+    dispatch(answerQuestion({ number: questionNumber, answer: true }));
   };
   const handleNo = (e) => {
     e.preventDefault();
-    dispatch(questionInfo.questionDispatch(false));
-    dispatch(setQuestion(props.number + 1));
-    console.log("No");
+    dispatch(answerQuestion({ number: questionNumber, answer: false }));
+    dispatch(setQuestion(questionNumber + 1));
   };
   return (
     <div>
-      <h2>{questionInfo.questionText}</h2>
+      <h2>{questionText}</h2>
       <button onClick={handleYes}>Sì</button>
       <button onClick={handleNo}>No</button>
     </div>

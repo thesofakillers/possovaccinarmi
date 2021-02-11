@@ -1,12 +1,17 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { resetState } from "../state/rootSlice";
 
-export const Result = () => {
-  const state = useSelector((state) => state);
-
+export const Result = (props) => {
+  const dispatch = useDispatch();
+  const handleReset = (e) => {
+    e.preventDefault();
+    dispatch(resetState());
+  };
   return (
-    <>
-      <pre>{JSON.stringify(state, null, 2)}</pre>
-    </>
+    <div>
+      <h2>{props.outcome ? "Puoi vaccinarti" : "Non puoi vaccinarti"}</h2>
+      <button onClick={handleReset}>Ricomincia</button>
+    </div>
   );
 };
