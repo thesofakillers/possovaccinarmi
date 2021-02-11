@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 let initialState = {
   currentQuestion: 0,
   questions: [
-    { text: "Sei un ospite di un'RSA?", value: false },
+    { text: "Sei un ospite di un' RSA?", value: false },
     { text: "Fai parte del personal di un' RSA?", value: false },
     { text: "Sei un operatore sanitario o sociosanitario?", value: false },
   ],
