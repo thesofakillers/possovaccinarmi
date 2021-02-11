@@ -1,33 +1,29 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+let initialState = {
+  currentQuestion: 0,
+  questions: [
+    { text: "Sei un ospite di un'RSA?", value: false },
+    { text: "Fai parte del personal di un' RSA?", value: false },
+    { text: "Sei un operatore sanitario o sociosanitario?", value: false },
+  ],
+};
+
 const rootSlice = createSlice({
   name: "root",
-  initialState: {
-    currentQuestion: 0,
-    ospiteRSA: false,
-    personaleRSA: false,
-    operatoreSS: false,
-  },
+  initialState: initialState,
   reducers: {
     setQuestion: (state, action) => {
       state.currentQuestion = action.payload;
     },
-    chooseOspiteRSA: (state, action) => {
-      state.ospiteRSA = action.payload;
+    answerQuestion: (state, action) => {
+      const number = action.payload.number;
+      const answer = action.payload.answer;
+      state.questions[number].value = answer;
     },
-    choosePersonaleRSA: (state, action) => {
-      state.personaleRSA = action.payload;
-    },
-    chooseOperatoreSS: (state, action) => {
-      state.operatoreSS = action.payload;
-    },
+    resetState: (_state) => initialState,
   },
 });
 
 export const reducer = rootSlice.reducer;
-export const {
-  setQuestion,
-  chooseOspiteRSA,
-  choosePersonaleRSA,
-  chooseOperatoreSS,
-} = rootSlice.actions;
+export const { setQuestion, answerQuestion, resetState } = rootSlice.actions;
