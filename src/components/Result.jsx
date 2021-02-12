@@ -9,7 +9,11 @@ const resultMap = {
     <p>
       Puoi vaccinarti a seconda della regione di residenza.<br></br>
       Controlla il{" "}
-      <a href="https://www.agenas.gov.it/#customHP" target="_blank">
+      <a
+        href="https://www.agenas.gov.it/#customHP"
+        target="_blank"
+        rel="noreferrer"
+      >
         sito sanitario della tua regione
       </a>
       .
