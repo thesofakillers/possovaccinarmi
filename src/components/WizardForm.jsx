@@ -3,16 +3,23 @@ import { useSelector } from "react-redux";
 import { Question } from "./Question";
 import { Result } from "./Result";
 
-function checkResult(questionList, questionNumber) {
+function checkResult(questionList, currentQuestion) {
   let resultOutcome = null;
-  const questionValues = questionList.map((question) => question.value);
-  if (questionValues.some((value) => value === true)) {
-    resultOutcome = true;
-  } else if (
-    questionValues.every((value) => value === false) &&
-    questionNumber >= questionValues.length
+
+  if (
+    questionList
+      .filter((q) => q.id !== 3)
+      .map((q) => q.value)
+      .some((value) => value === true)
   ) {
-    resultOutcome = false;
+    resultOutcome = 0;
+  } else if (
+    questionList.map((q) => q.value).every((value) => value === false) &&
+    currentQuestion === null
+  ) {
+    resultOutcome = 1;
+  } else if (questionList.find((q) => q.id === 3).value === true) {
+    resultOutcome = 2;
   }
   return resultOutcome;
 }
@@ -23,13 +30,8 @@ export const WizardForm = () => {
   const currentQuestion = state.currentQuestion;
   const questions = state.questions;
   const resultOutcome = checkResult(questions, currentQuestion);
-  if (resultOutcome == null) {
-    return (
-      <Question
-        number={currentQuestion}
-        text={questions[currentQuestion].text}
-      />
-    );
+  if (resultOutcome === null) {
+    return <Question id={currentQuestion} />;
   } else {
     return <Result outcome={resultOutcome} />;
   }

@@ -3,9 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 let initialState = {
   currentQuestion: 0,
   questions: [
-    { text: "Sei un ospite di un' RSA?", value: false },
-    { text: "Fai parte del personale di un' RSA?", value: false },
-    { text: "Sei un operatore sanitario o sociosanitario?", value: false },
+    { id: 0, value: false },
+    { id: 1, value: false },
+    { id: 2, value: false },
+    { id: 3, value: false },
   ],
 };
 
@@ -17,9 +18,10 @@ const rootSlice = createSlice({
       state.currentQuestion = action.payload;
     },
     answerQuestion: (state, action) => {
-      const number = action.payload.number;
+      const id = action.payload.question_id;
       const answer = action.payload.answer;
-      state.questions[number].value = answer;
+      const questionIndex = state.questions.findIndex((q) => q.id === id);
+      state.questions[questionIndex].value = answer;
     },
     resetState: (_state) => initialState,
   },
