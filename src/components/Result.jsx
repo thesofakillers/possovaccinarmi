@@ -29,8 +29,14 @@ export const Result = (props) => {
   };
   return (
     <div>
-      <h2>{resultMap[props.outcome]}</h2>
-      <button onClick={handleReset}>Ricomincia</button>
+      <div className="block is-size-3 is-size-5-mobile">
+        {resultMap[props.outcome]}
+      </div>
+      <div className="block is-centered">
+        <button className="button is-black is-large " onClick={handleReset}>
+          Ricomincia
+        </button>
+      </div>
     </div>
   );
 };

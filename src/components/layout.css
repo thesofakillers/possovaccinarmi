@@ -1,0 +1,19 @@
+div {
+  display: block;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 8em;
+  -ms-transform: translateY(-50%, 0);
+  transform: translateY(-50%, 0);
+}
+
+.main {
+  width: 50em;
+  height: auto;
+}
+button {
+  width: 15rem;
+}

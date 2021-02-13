@@ -26,9 +26,15 @@ export const Question = (props) => {
   };
   return (
     <div>
-      <h2>{questionText}</h2>
-      <button onClick={handleYes}>Sì</button>
-      <button onClick={handleNo}>No</button>
+      <div className="block is-size-3 is-size-5-mobile">{questionText}</div>
+      <div className="block buttons are-large">
+        <button className="button is-link" onClick={handleYes}>
+          Sì
+        </button>
+        <button className="button is-dark" onClick={handleNo}>
+          No
+        </button>
+      </div>
     </div>
   );
 };
