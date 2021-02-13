@@ -23,7 +23,7 @@ export const Layout = ({ children }) => {
         />
       </Helmet>
       <SEO />
-      <div classname="main">
+      <div className="main">
         <div className="columns py-6 my-2">
           <div className={mainClassNames.join(" ")}>{children}</div>
         </div>
