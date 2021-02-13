@@ -2,16 +2,12 @@ module.exports = {
   siteMetadata: {
     title: "Posso Vaccinarmi?",
     siteUrl: "https://possovaccinarmi.it",
+    description:
+      "Controlla se rientri nelle categorie a cui è disponibile il vaccino anti-COVID.",
+    image: "/images/favicon.png",
+    twitterUsername: "@thesofakillers",
   },
   plugins: [
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        name: "Posso Vaccinarmi?",
-        short_name: "possovaccinarmi",
-        icon: "src/images/favicon.png",
-      },
-    },
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
