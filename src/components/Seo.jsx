@@ -17,28 +17,25 @@ const query = graphql`
   }
 `;
 
-const SEO = ({ title, description, image }) => {
+const SEO = ({ title, description }) => {
   const { site } = useStaticQuery(query);
 
   const {
     defaultTitle,
     defaultDescription,
     siteUrl,
-    defaultImage,
     twitterUsername,
   } = site.siteMetadata;
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
     url: siteUrl,
   };
 
   return (
     <Helmet title={seo.title}>
       <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
 
       {seo.url && <meta property="og:url" content={seo.url} />}
 
