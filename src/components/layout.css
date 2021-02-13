@@ -1,19 +1,14 @@
-div {
-  display: block;
-}
-
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 8em;
-  -ms-transform: translateY(-50%, 0);
-  transform: translateY(-50%, 0);
-}
-
 .main {
-  width: 50em;
-  height: auto;
+  height: 100%;
 }
+
 button {
   width: 15rem;
+}
+
+footer.my-footer {
+  bottom: 2em;
+  position: relative;
+  font-size: small;
+  width: 100%;
 }
