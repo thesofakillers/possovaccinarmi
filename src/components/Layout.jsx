@@ -29,14 +29,20 @@ export const Layout = ({ children }) => {
           <div className={mainClassNames.join(" ")}>{children}</div>
         </div>
         <CookieConsent
-          location="bottom"
-          buttonText="Consento"
-          declineButtonText="Rifiuto"
-          enableDeclineButton={true}
+          location="top"
+          overlay={true}
+          buttonText="Ho capito"
+          disableButtonStyles={true}
+          buttonClasses="my-3 mx-4 button is-info"
           cookieName="gatsby-gdpr-google-analytics"
-          flipButtons={true}
         >
-          Questo sito usa Cookies anonimizzati per scopi analitici.
+          <h2>Avviso GDPR</h2>
+          Questo sito utilizza cookie di Google per erogare i propri servizi e
+          per analizzare il traffico. Il tuo indirizzo IP verrà condiviso in
+          modo anonimizzato con Google, unitamente alle metriche sulle
+          prestazioni e sulla sicurezza, per garantire la qualità del servizio,
+          generare statistiche di utilizzo e rilevare e contrastare eventuali
+          abusi.
         </CookieConsent>
         <Footer />
       </div>
