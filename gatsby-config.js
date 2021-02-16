@@ -12,5 +12,13 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-plugin-gdpr-cookies",
+      options: {
+        googleAnalytics: {
+          trackingId: "UA-143281261-4",
+        },
+      },
+    },
   ],
 };

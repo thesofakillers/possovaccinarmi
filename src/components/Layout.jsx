@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import CookieConsent from "react-cookie-consent";
 import SEO from "./Seo";
 import { Footer } from "./Footer";
 import "bulma/css/bulma.css";
@@ -27,6 +28,16 @@ export const Layout = ({ children }) => {
         <div className="columns py-6 my-2">
           <div className={mainClassNames.join(" ")}>{children}</div>
         </div>
+        <CookieConsent
+          location="bottom"
+          buttonText="Consento"
+          declineButtonText="Rifiuto"
+          enableDeclineButton={true}
+          cookieName="gatsby-gdpr-google-analytics"
+          flipButtons={true}
+        >
+          Questo sito usa Cookies anonimizzati per scopi analitici.
+        </CookieConsent>
         <Footer />
       </div>
     </>
