@@ -3,23 +3,37 @@ import { useSelector } from "react-redux";
 import { Question } from "./Question";
 import { Result } from "./Result";
 
+/*
+ * checks if any of the questions specified in idList are true in
+ * questionList
+ */
+function checkSomeTrue(objectList, idList) {
+  let result = objectList
+    .filter((o) => idList.includes(o.id))
+    .map((filteredO) => filteredO.value)
+    .some((value) => value === true);
+  return result;
+}
+
 function checkResult(questionList, currentQuestion) {
   let resultOutcome = null;
 
-  if (
-    questionList
-      .filter((q) => q.id !== 3)
-      .map((q) => q.value)
-      .some((value) => value === true)
-  ) {
+  // compute which result outcome to show as defined in Result.jsx
+  if (checkSomeTrue(questionList, [0, 1, 2])) {
     resultOutcome = 0;
+  } else if (questionList.find((q) => q.id === 3).value === true) {
+    resultOutcome = 2;
+  } else if (questionList.find((q) => q.id === 5).value === true) {
+    resultOutcome = 3;
+  } else if (checkSomeTrue(questionList, [4, 6, 7, 8])) {
+    resultOutcome = 4;
+  } else if (checkSomeTrue(questionList, [9, 10, 11])) {
+    resultOutcome = 5;
   } else if (
     questionList.map((q) => q.value).every((value) => value === false) &&
     currentQuestion === null
   ) {
     resultOutcome = 1;
-  } else if (questionList.find((q) => q.id === 3).value === true) {
-    resultOutcome = 2;
   }
   return resultOutcome;
 }
