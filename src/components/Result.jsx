@@ -3,11 +3,11 @@ import { useDispatch } from "react-redux";
 import { resetState } from "../state/rootSlice";
 
 const resultMap = {
-  0: "Puoi vaccinarti",
+  0: "Puoi vaccinarti. Sarete contattati con chiamata attiva.",
   1: "Non puoi vaccinarti, per ora.",
   2: (
     <p>
-      Puoi vaccinarti a seconda della regione di residenza.<br></br>
+      Puoi vaccinarti.<br></br>
       Controlla il{" "}
       <a
         href="https://www.agenas.gov.it/#customHP"
@@ -16,7 +16,7 @@ const resultMap = {
       >
         sito sanitario della tua regione
       </a>
-      .
+      ,<br></br>oppure rivolgiti al tuo medico curante.
     </p>
   ),
 };
