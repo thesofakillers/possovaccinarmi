@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Posso Vaccinarmi?",
+    title: "Posso Vaccinarmi? Risposte semplici a domande mirate",
     siteUrl: "https://possovaccinarmi.it",
     description:
       "Controlla se rientri nelle categorie a cui è disponibile il vaccino anti-COVID.",
