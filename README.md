@@ -12,5 +12,6 @@ sito ufficiale ed il dover navigare i risultati inquinati da articoli di
 giornale per capire chi si potesse vaccinare.
 
 Monitoro gli ultimi aggiornamenti con [Visualping](https://visualping.io/), che
-mi notifica se qualcosa cambia nella pagina ufficiale del governo che uso per le
-informazioni.
+mi notifica se qualcosa cambia nella
+[pagina ufficiale del governo](https://www.salute.gov.it/portale/nuovocoronavirus/dettaglioFaqNuovoCoronavirus.jsp?lingua=italiano&id=249)
+che uso per le informazioni.
