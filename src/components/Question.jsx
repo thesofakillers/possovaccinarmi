@@ -6,8 +6,8 @@ const questionMap = {
   0: { text: "Sei un ospite di un' RSA?", nextQuestion: 1 },
   1: { text: "Fai parte del personale di un' RSA?", nextQuestion: 2 },
   2: { text: "Sei un operatore sanitario o sociosanitario?", nextQuestion: 3 },
-  3: { text: "Hai almeno 60 anni?", nextQuestion: 5 },
-  4: { text: "Hai almeno 40 anni?", nextQuestion: 6 },
+  3: { text: "Hai almeno 40 anni?", nextQuestion: 5 },
+  4: { text: "Hai almeno 18 anni?", nextQuestion: 6 },
   5: {
     text: (
       <div>

@@ -8,8 +8,7 @@ const resultMap = {
   1: "Non puoi vaccinarti, per ora.",
   2: (
     <div>
-      Puoi vaccinarti. <ControllaRegione end={","} />
-      oppure rivolgiti al tuo medico curante.
+      Puoi vaccinarti. <ControllaRegione end={"."} />
     </div>
   ),
   3: (
