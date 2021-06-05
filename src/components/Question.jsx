@@ -7,7 +7,7 @@ const questionMap = {
   1: { text: "Fai parte del personale di un' RSA?", nextQuestion: 2 },
   2: { text: "Sei un operatore sanitario o sociosanitario?", nextQuestion: 3 },
   3: { text: "Hai almeno 40 anni?", nextQuestion: 5 },
-  4: { text: "Hai almeno 18 anni?", nextQuestion: 6 },
+  4: { text: "Hai almeno 18 anni?", nextQuestion: null },
   5: {
     text: (
       <div>
@@ -21,7 +21,7 @@ const questionMap = {
         </a>
       </div>
     ),
-    nextQuestion: 4,
+    nextQuestion: 6,
   },
   6: {
     text: (
@@ -62,7 +62,7 @@ const questionMap = {
   },
   11: {
     text: "Lavori in luoghi di comunità del tipo civile o religioso?",
-    nextQuestion: null,
+    nextQuestion: 4,
   },
 };
 
