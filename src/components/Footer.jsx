@@ -3,8 +3,8 @@ import React from "react";
 export const Footer = () => {
   return (
     <footer className="my-footer">
-      <div className="columns">
-        <div className="column is-offset-1-mobile is-offset-1-tablet is-offset-3-desktop is-narrow">
+      <div className="columns is-centered">
+        <div className="column is-offset-1-mobile is-narrow-tablet">
           Creato con{" "}
           <span role="img" aria-label="love">
             ♥️
@@ -14,7 +14,7 @@ export const Footer = () => {
             Giulio Starace
           </a>
         </div>
-        <div className="column is-offset-1-mobile is-narrow">
+        <div className="column is-offset-1-mobile is-narrow-tablet">
           Source code su{" "}
           <a
             href="https://github.com/thesofakillers/possovaccinarmi"

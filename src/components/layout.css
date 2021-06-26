@@ -10,8 +10,6 @@ button {
 }
 
 footer.my-footer {
-  bottom: 2em;
-  position: relative;
   font-size: small;
   width: 100%;
 }

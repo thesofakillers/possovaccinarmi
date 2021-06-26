@@ -7,14 +7,7 @@ import "bulma/css/bulma.css";
 import "./layout.css";
 
 export const Layout = ({ children }) => {
-  const mainClassNames = [
-    "column",
-    "is-offset-1-mobile",
-    "is-narrow-tablet",
-    "is-offset-1-tablet",
-    "is-third-desktop",
-    "is-offset-one-quarter-desktop",
-  ];
+  const mainClassNames = ["column", "is-offset-1-mobile", "is-narrow-tablet"];
   return (
     <>
       <Helmet>
@@ -26,7 +19,7 @@ export const Layout = ({ children }) => {
       </Helmet>
       <SEO />
       <div className="main">
-        <div className="columns py-6 my-2">
+        <div className="columns is-centered pt-6 mt-2">
           <div className={mainClassNames.join(" ")}>{children}</div>
         </div>
         <CookieConsent
