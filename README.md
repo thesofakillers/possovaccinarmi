@@ -1,3 +1,5 @@
+> Archiviato: visto il miglioramento della situazione, ho deciso di archiviare questo sito.
+
 # Posso Vaccinarmi?
 
 Controlla se rientri nelle categorie a cui è disponibile il vaccino anti-COVID.
